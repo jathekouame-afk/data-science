@@ -1,0 +1,667 @@
+[
+    {
+        "timestamp": "2026-02-12 15:43:10",
+        "step": "Prediction",
+        "details": {
+            "accuracy": 0.5,
+            "features": [
+                "Anciennet\u00e9 (mois)",
+                "target"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:11:09",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:11:57",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:14:26",
+        "step": "Prediction",
+        "details": {
+            "accuracy": 1.0,
+            "features": [
+                "Anciennet\u00e9 (mois)",
+                "target"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:22:42",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:22:49",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:22:53",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:23:22",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:23:28",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:23:51",
+        "step": "Prediction",
+        "details": {
+            "accuracy": 1.0,
+            "features": [
+                "Anciennet\u00e9 (mois)",
+                "target"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:38:43",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:40:18",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:45:24",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:47:58",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 16:49:38",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:03:47",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:17:24",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:24:18",
+        "step": "Import",
+        "details": {
+            "filename": "Donn\u00e9es_brutes.xlsx",
+            "rows": 11,
+            "cols": 13
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:24:37",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:26:26",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:34:34",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:35:33",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 10,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:45:48",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:49:46",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:50:16",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:51:40",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:54:03",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:54:16",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:54:17",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:54:23",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:57:02",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:57:17",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:57:17",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 17:57:20",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:00:35",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:00:48",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:00:48",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:00:51",
+        "step": "Import",
+        "details": {
+            "filename": "test.xlsx",
+            "rows": 10,
+            "cols": 12
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:02:12",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 10,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:10:05",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:10:16",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:10:16",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:10:19",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:11:33",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:21",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:21",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:23",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:41",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:42",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:12:44",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:13:40",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:13:41",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:13:43",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:19:08",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:19:34",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:19:34",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:19:37",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:21:00",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:21:01",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:21:05",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:21:58",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:21:58",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:22:01",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:24:59",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:25:23",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:25:23",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:25:26",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:34:39",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:34:51",
+        "step": "Nettoyage",
+        "details": {
+            "final_rows": 100,
+            "date_conversions": [],
+            "has_nans": 0
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:35:19",
+        "step": "Prediction",
+        "details": {
+            "accuracy": 1.0,
+            "features": [
+                "Anciennet\u00e9 (mois)",
+                "target"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:35:54",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:38:38",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    },
+    {
+        "timestamp": "2026-02-12 18:40:59",
+        "step": "Import",
+        "details": {
+            "filename": "best.xlsx",
+            "rows": 100,
+            "cols": 11
+        }
+    }
+]
