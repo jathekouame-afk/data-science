@@ -424,7 +424,7 @@ if 'df_clean' not in st.session_state:
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 
-st.sidebar.info("Projet de stage : Assistant d'aide à la décision pour l'analyse de la rentabilité.")
+st.sidebar.info("Projet : Assistant d'aide à la décision pour l'analyse de la rentabilité.")
 
 # --- Page 1: Import des données ---
 if page == "1. Import des données":
