@@ -9,19 +9,19 @@ import os
 import requests
 from groq import Groq
 
-# Configuration de la page
+
 st.set_page_config(
     page_title="Assistant Décisionnel - Rentabilité Client",
     page_icon="😏",
     layout="wide"
 )
 
-# Initialisation du dossier de sortie
+
 OUTPUT_DIR = "outputs"
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-# --- Fonctions Utiles ---
+
 def make_json_serializable(obj):
     """Convertit un objet en quelque chose de sérialisable en JSON"""
     if isinstance(obj, (bool, np.bool_)):
@@ -45,15 +45,14 @@ def save_audit_log(step, details):
     log_file = os.path.join(OUTPUT_DIR, "audit_trail.json")
     log_data = []
     
-    # Gérer les logs corrompus
+    # Pour gérer les logs corrompus
     if os.path.exists(log_file):
         try:
             with open(log_file, "r") as f:
                 log_data = json.load(f)
         except (json.JSONDecodeError, IOError):
-            log_data = []  # Réinitialiser si le fichier est corrompu
+            log_data = [] 
     
-    # Rendre les détails sérialisables
     serializable_details = make_json_serializable(details)
     
     log_entry = {
@@ -69,7 +68,6 @@ def save_audit_log(step, details):
     except (IOError, TypeError) as e:
         print(f"Erreur lors de la sauvegarde du log: {e}")
 
-# --- Barre latérale pour la navigation ---
 st.sidebar.title("📌 Navigation")
 page = st.sidebar.radio(
     "Étapes du projet",
@@ -112,14 +110,12 @@ def get_analysis_context():
         context += f"- Types de données : {dict(df.dtypes.astype(str))}.\n"
         context += f"- Valeurs manquantes : {df.isnull().sum().sum()} au total.\n"
         
-        # Ajouter des exemples de données pour les colonnes numériques
         numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
         if numeric_cols:
             context += f"- Colonnes numériques : {', '.join(numeric_cols)}.\n"
             for col in numeric_cols[:3]:  # Limiter aux 3 premières colonnes
                 context += f"  * {col}: min={df[col].min():.2f}, max={df[col].max():.2f}, moyenne={df[col].mean():.2f}\n"
         
-        # Ajouter des exemples de données pour les colonnes catégorielles
         cat_cols = df.select_dtypes(include=['object']).columns.tolist()
         if cat_cols:
             context += f"- Colonnes catégorielles : {', '.join(cat_cols)}.\n"
@@ -146,7 +142,7 @@ def get_analysis_context():
     return context
 
 def render_ai_chatbot():
-    # Chatbot intégré avec design moderne et épuré
+    # Mon chatbot intégré avec design moderne et épuré
     st.markdown("""
     <style>
     .chat-container {
@@ -301,7 +297,6 @@ def render_ai_chatbot():
     </style>
     """, unsafe_allow_html=True)
     
-    # Conteneur principal du chatbot
     with st.container():
         st.markdown('<div class="chat-container">', unsafe_allow_html=True)
         st.markdown('<div class="chat-header">🤖 Assistant IA - Votre Expert Data Science</div>', unsafe_allow_html=True)
@@ -310,7 +305,6 @@ def render_ai_chatbot():
         if "chat_history" not in st.session_state:
             st.session_state.chat_history = []
 
-        # Afficher l'historique du chat avec design amélioré
         for msg in st.session_state.chat_history:
             if msg["role"] == "user":
                 st.markdown(f'<div class="chat-message-user">💭 {msg["content"]}</div>', unsafe_allow_html=True)
@@ -321,7 +315,6 @@ def render_ai_chatbot():
         
         st.markdown('<div class="chat-input-area">', unsafe_allow_html=True)
         
-        # Bouton pour effacer le chat et input pour le message
         col_clear, col1, col2 = st.columns([1, 4, 1])
         with col_clear:
             clear_button = st.button("🗑️", key="clear_btn", help="Effacer la conversation")
@@ -330,13 +323,11 @@ def render_ai_chatbot():
         with col2:
             send_button = st.button("➤", key="send_btn", help="Envoyer votre question")
         
-        # Gérer l'effacement du chat
         if clear_button:
             st.session_state.chat_history = []
             st.session_state.last_prompt = ""
             st.rerun()
         
-        # Gérer l'envoi du message
         if (send_button or (prompt and st.session_state.get('last_prompt') != prompt)):
             if prompt and prompt.strip():
                 st.session_state.chat_history.append({"role": "user", "content": prompt.strip()})
@@ -347,11 +338,9 @@ def render_ai_chatbot():
         st.markdown('</div>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-    # Générer une réponse si le dernier message est de l'utilisateur
     if st.session_state.chat_history and st.session_state.chat_history[-1]["role"] == "user":
         context = get_analysis_context()
         
-        # Ajout des données réelles dans le contexte pour des réponses concrètes
         detailed_context = context
         if st.session_state.data is not None:
             df = st.session_state.data
@@ -360,20 +349,17 @@ def render_ai_chatbot():
             detailed_context += f"- Colonnes : {df.columns.tolist()}\n"
             detailed_context += f"- Aperçu des 10 premières lignes :\n{df.head(10).to_string()}\n"
             
-            # Ajouter des statistiques descriptives pour les colonnes numériques
             numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
             if numeric_cols:
                 detailed_context += f"\n- Statistiques des colonnes numériques :\n{df[numeric_cols].describe().to_string()}\n"
             
-            # Ajouter les valeurs uniques pour les colonnes catégorielles importantes
             cat_cols = df.select_dtypes(include=['object']).columns.tolist()
             if cat_cols:
                 detailed_context += f"\n- Valeurs uniques des colonnes catégorielles :\n"
-                for col in cat_cols[:5]:  # Limiter aux 5 premières colonnes catégorielles
+                for col in cat_cols[:5]:  
                     unique_vals = df[col].value_counts().head(10).to_dict()
                     detailed_context += f"  * {col}: {dict(list(unique_vals.items())[:5])}\n"
             
-            # Ajouter les clients avec montants extrêmes
             if 'Montant' in df.columns:
                 max_montant = df['Montant'].max()
                 min_montant = df['Montant'].min()
@@ -384,7 +370,6 @@ def render_ai_chatbot():
                 detailed_context += f"  * Montant maximum ({max_montant}): {max_client.iloc[0].to_dict() if len(max_client) > 0 else 'Non trouvé'}\n"
                 detailed_context += f"  * Montant minimum ({min_montant}): {min_client.iloc[0].to_dict() if len(min_client) > 0 else 'Non trouvé'}\n"
                 
-                # Ajouter les clients rentables et non rentables
                 if 'Rentabilité' in df.columns:
                     rentables = df[df['Rentabilité'] == 'Rentable']
                     non_rentables = df[df['Rentabilité'] == 'Non rentable']
@@ -416,7 +401,6 @@ INSTRUCTIONS CRUCIALES :
             st.session_state.chat_history.append({"role": "assistant", "content": response})
             st.rerun()
 
-# --- Gestion de l'état (Session State) ---
 if 'data' not in st.session_state:
     st.session_state.data = None
 if 'df_clean' not in st.session_state:
@@ -426,7 +410,6 @@ if 'chat_history' not in st.session_state:
 
 st.sidebar.info("Projet : Assistant d'aide à la décision pour l'analyse de la rentabilité.")
 
-# --- Page 1: Import des données ---
 if page == "1. Import des données":
     st.title("📥 Import des données")
     st.write("Téléchargez vos fichiers clients ou transactions (CSV ou Excel).")
@@ -451,7 +434,6 @@ if page == "1. Import des données":
         except Exception as e:
             st.error(f"Erreur lors du chargement : {e}")
 
-# --- Page 2: Exploration (EDA) ---
 elif page == "2. Exploration (EDA)":
     st.title("🔍 Exploration des données (EDA)")
     
@@ -482,7 +464,6 @@ elif page == "2. Exploration (EDA)":
         else:
             st.write("Aucune colonne numérique détectée.")
 
-# --- Page 3: Nettoyage ---
 elif page == "3. Nettoyage":
     st.title("🧼 Nettoyage des données")
     
@@ -540,7 +521,6 @@ elif page == "3. Nettoyage":
                 "has_nans": df.isnull().any().any()
             })
 
-# --- Page 4: Insights ---
 elif page == "4. Insights":
     st.title("📊 Analyses & Insights")
     
@@ -575,7 +555,6 @@ elif page == "4. Insights":
         else:
             st.write("Aucune donnée numérique pour calculer des KPI.")
 
-# --- Page 5: Prédiction ---
 elif page == "5. Prédiction":
     st.title("🤖 Prédiction de la Rentabilité")
     
@@ -626,7 +605,6 @@ elif page == "5. Prédiction":
                     
                     save_audit_log("Prediction", {"accuracy": acc, "features": features})
 
-# --- Page 6: Rapport Final ---
 elif page == "6. Rapport Final":
     st.title("📑 Rapport Final")
     
@@ -650,7 +628,6 @@ elif page == "6. Rapport Final":
         if st.button("Générer le rapport (Simulation)", use_container_width=True):
             st.success("Rapport généré dans le dossier 'outputs'. (Fonctionnalité en cours de finalisation)")
 
-# --- Page 7: Perspectives ---
 elif page == "7. Perspectives":
     st.title("🚀 Perspectives & Améliorations")
     
@@ -663,7 +640,6 @@ elif page == "7. Perspectives":
     - **Visualisations avancées** : Cartographie géographique et analyses de cohortes.
     """)
 
-# --- Autres pages (Squelettes) ---
 else:
     st.title(page)
     st.write("Cette section sera implémentée dans les prochains sprints.")
