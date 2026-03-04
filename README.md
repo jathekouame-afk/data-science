@@ -1,5 +1,6 @@
 # Assistant Décisionnel - Rentabilité Client
 Tester directement sur: https://data-science-jathe.streamlit.app
+
 Application Streamlit pour l'analyse de rentabilité client avec assistant IA intégré.
 
 ## Fonctionnalités
